@@ -58,8 +58,8 @@ public class MaterialIconsPageConfigurator
 	{
 		if (!page.isConfigured())
 		{
-			new CSSReference("MaterialIcons", 2.485, "bower_components/mdi/css/materialdesignicons.min.css",
-			                 "//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css");
+			page.addCssReference(new CSSReference("MaterialIcons2485", 2.485, "bower_components/mdi/css/materialdesignicons.min.css",
+			                                      "//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css"));
 		}
 		return page;
 	}
