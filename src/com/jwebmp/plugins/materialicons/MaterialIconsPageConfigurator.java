@@ -45,6 +45,9 @@ public class MaterialIconsPageConfigurator
 {
 	private static final long serialVersionUID = 1L;
 
+	private static final CSSReference reference = new CSSReference("MaterialIcons2485", 2.485, "bower_components/mdi/css/materialdesignicons.min.css",
+	                                                               "//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css");
+
 	/**
 	 * A new instance of the page configurator
 	 */
@@ -58,8 +61,7 @@ public class MaterialIconsPageConfigurator
 	{
 		if (!page.isConfigured())
 		{
-			page.addCssReference(new CSSReference("MaterialIcons2485", 2.485, "bower_components/mdi/css/materialdesignicons.min.css",
-			                                      "//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css"));
+			page.addCssReference(reference);
 		}
 		return page;
 	}
