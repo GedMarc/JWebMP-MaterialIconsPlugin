@@ -2055,7 +2055,8 @@ public enum MDIIcons
 	yelp,
 	yin_yang,
 	youtube_play,
-	zip_box,;
+	zip_box,
+	;
 
 	private static final String mdiClassPrefix = "mdi mdi-";
 
