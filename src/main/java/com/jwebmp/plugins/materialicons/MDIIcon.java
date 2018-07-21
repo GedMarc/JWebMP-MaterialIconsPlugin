@@ -1,6 +1,6 @@
 package com.jwebmp.plugins.materialicons;
 
-import com.jwebmp.base.html.Italic;
+import com.jwebmp.core.base.html.Italic;
 
 /**
  * A material design icon using an older version - classes only web fonts. prefixed with mdi-
