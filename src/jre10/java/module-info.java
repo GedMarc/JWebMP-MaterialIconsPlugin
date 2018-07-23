@@ -1,3 +1,6 @@
+import com.jwebmp.core.services.IPageConfigurator;
+import com.jwebmp.plugins.materialicons.MaterialIconsPageConfigurator;
+
 module com.jwebmp.plugins.materialicons {
 
 	exports com.jwebmp.plugins.materialicons;
@@ -8,4 +11,6 @@ module com.jwebmp.plugins.materialicons {
 
 	requires java.validation;
 	requires java.logging;
+
+	provides IPageConfigurator with MaterialIconsPageConfigurator;
 }

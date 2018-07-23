@@ -17,9 +17,9 @@
 package com.jwebmp.plugins.materialicons;
 
 import com.jwebmp.core.Page;
-import com.jwebmp.core.PageConfigurator;
 import com.jwebmp.core.base.references.CSSReference;
 import com.jwebmp.core.plugins.PluginInformation;
+import com.jwebmp.core.services.IPageConfigurator;
 
 /**
  * @author GedMarc
@@ -41,10 +41,8 @@ import com.jwebmp.core.plugins.PluginInformation;
 		pluginLastUpdatedDate = "2018/07/02")
 @SuppressWarnings("unused")
 public class MaterialIconsPageConfigurator
-		extends PageConfigurator
+		implements IPageConfigurator
 {
-	private static final long serialVersionUID = 1L;
-
 	private static final CSSReference reference = new CSSReference("MaterialIcons2485", 2.485, "bower_components/mdi/css/materialdesignicons.min.css",
 	                                                               "//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css");
 
