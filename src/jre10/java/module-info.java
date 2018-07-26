@@ -13,4 +13,5 @@ module com.jwebmp.plugins.materialicons {
 	requires java.logging;
 
 	provides IPageConfigurator with MaterialIconsPageConfigurator;
+	opens com.jwebmp.plugins.materialicons to com.fasterxml.jackson.databind,com.jwebmp.core;
 }
