@@ -1,6 +1,6 @@
 package com.jwebmp.plugins.materialicons;
 
-import com.jwebmp.core.base.interfaces.ICSSClassName;
+import com.jwebmp.core.base.interfaces.ICssClassName;
 
 import static com.jwebmp.core.utilities.StaticStrings.*;
 
@@ -8,7 +8,7 @@ import static com.jwebmp.core.utilities.StaticStrings.*;
  * The list of icons for the mdi icon set
  */
 public enum MDIIcons
-		implements ICSSClassName
+		implements ICssClassName
 {
 	access_point,
 	access_point_network,
