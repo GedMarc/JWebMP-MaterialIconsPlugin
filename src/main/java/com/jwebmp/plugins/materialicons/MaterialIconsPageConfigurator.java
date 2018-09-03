@@ -47,6 +47,10 @@ public class MaterialIconsPageConfigurator
 {
 	private static final CSSReference reference = new CSSReference("MaterialIcons2485", 2.485, "bower_components/mdi/css/materialdesignicons.min.css",
 	                                                               "//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css");
+	/**
+	 * If this configurator is enabled
+	 */
+	private static boolean enabled = true;
 
 	/**
 	 * A new instance of the page configurator
@@ -56,14 +60,45 @@ public class MaterialIconsPageConfigurator
 		//No config needed
 	}
 
+	/**
+	 * Method isEnabled returns the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
+	 *
+	 * @return the enabled (type boolean) of this AngularAnimatedChangePageConfigurator object.
+	 */
+	public static boolean isEnabled()
+	{
+		return MaterialIconsPageConfigurator.enabled;
+	}
+
+	/**
+	 * Method setEnabled sets the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
+	 *
+	 * @param mustEnable
+	 * 		the enabled of this AngularAnimatedChangePageConfigurator object.
+	 */
+	public static void setEnabled(boolean mustEnable)
+	{
+		MaterialIconsPageConfigurator.enabled = mustEnable;
+	}
+
 	@NotNull
 	@Override
 	public Page configure(Page page)
 	{
 		if (!page.isConfigured())
 		{
-			page.addCssReference(reference);
+			page.addCssReference(MaterialIconsPageConfigurator.reference);
 		}
 		return page;
+	}
+
+	@Override
+	public boolean enabled()
+	{
+		return MaterialIconsPageConfigurator.enabled;
 	}
 }
