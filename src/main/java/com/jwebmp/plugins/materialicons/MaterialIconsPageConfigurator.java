@@ -43,7 +43,7 @@ import javax.validation.constraints.NotNull;
 		pluginLastUpdatedDate = "2018/07/02")
 @SuppressWarnings("unused")
 public class MaterialIconsPageConfigurator
-		implements IPageConfigurator
+		implements IPageConfigurator<MaterialIconsPageConfigurator>
 {
 	private static final CSSReference reference = new CSSReference("MaterialIcons2485", 2.485, "bower_components/mdi/css/materialdesignicons.min.css",
 	                                                               "//cdn.materialdesignicons.com/2.4.85/css/materialdesignicons.min.css");
