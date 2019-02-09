@@ -89,7 +89,7 @@ public class MaterialIconsPageConfigurator
 	@Override
 	public Page configure(Page page)
 	{
-		if (!page.isConfigured())
+		if (!page.isConfigured() && enabled())
 		{
 			page.addCssReference(MaterialIconsPageConfigurator.reference);
 		}
