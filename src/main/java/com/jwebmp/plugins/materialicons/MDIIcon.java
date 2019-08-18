@@ -1,13 +1,18 @@
 package com.jwebmp.plugins.materialicons;
 
+import com.jwebmp.core.base.ComponentHierarchyBase;
 import com.jwebmp.core.base.html.Italic;
+import com.jwebmp.core.base.interfaces.IIcon;
 
 /**
  * A material design icon using an older version - classes only web fonts. prefixed with mdi-
  */
 public class MDIIcon<J extends MDIIcon<J>>
 		extends Italic<J>
+	implements IIcon<J>
 {
+	private MDIIcons icon;
+
 	public MDIIcon()
 	{
 		this(null);
@@ -15,8 +20,29 @@ public class MDIIcon<J extends MDIIcon<J>>
 
 	public MDIIcon(MDIIcons icon)
 	{
-		super();
+		this.icon = icon;
 		addClass(icon);
 	}
 
+	@Override
+	public void preConfigure()
+	{
+		if(!isConfigured())
+		{
+			addClass(icon);
+		}
+		super.preConfigure();
+	}
+
+	@Override
+	public String getClassName()
+	{
+		return icon.toString();
+	}
+
+	@Override
+	public ComponentHierarchyBase getIconComponent()
+	{
+		return this;
+	}
 }
