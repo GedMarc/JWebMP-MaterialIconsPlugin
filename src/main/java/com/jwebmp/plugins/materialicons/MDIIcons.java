@@ -2,7 +2,7 @@ package com.jwebmp.plugins.materialicons;
 
 import com.jwebmp.core.base.interfaces.ICssClassName;
 
-import static com.jwebmp.core.utilities.StaticStrings.*;
+import static com.guicedee.guicedinjection.json.StaticStrings.*;
 
 /**
  * The list of icons for the mdi icon set
@@ -2065,6 +2065,6 @@ public enum MDIIcons
 	{
 		return mdiClassPrefix + name().toLowerCase()
 		                              .replace(CHAR_UNDERSCORE, CHAR_DASH)
-		                              .replaceAll("\\$", STRING_EMPTY);
+		                              .replaceAll(STRING_DOLLAR_ESCAPED, STRING_EMPTY);
 	}
 }

@@ -13,3 +13,4 @@ persistence.xml
 **.jacocoverage/
 **/*.iml
 *.iml
+/.idea/
