@@ -9,7 +9,7 @@ import com.jwebmp.core.base.interfaces.IIcon;
  */
 public class MDIIcon<J extends MDIIcon<J>>
 		extends Italic<J>
-	implements IIcon<J>
+	implements IIcon<com.jwebmp.core.base.interfaces.IComponentHierarchyBase, J>
 {
 	private MDIIcons icon;
 
