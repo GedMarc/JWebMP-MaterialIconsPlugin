@@ -19,6 +19,7 @@ package com.jwebmp.plugins.materialicons;
 import com.jwebmp.core.Page;
 import com.jwebmp.core.base.references.CSSReference;
 import com.jwebmp.core.plugins.PluginInformation;
+import com.jwebmp.core.plugins.PluginStatus;
 import com.jwebmp.core.services.IPageConfigurator;
 
 import jakarta.validation.constraints.NotNull;
@@ -38,9 +39,15 @@ import jakarta.validation.constraints.NotNull;
 		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-MaterialDesignIconsPlugin/wiki",
 		pluginOriginalHomepage = "https://google.github.io/material-design-icons/",
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/MaterialDesignIcons.jar/download",
-		pluginIconUrl = "https://material.io/tools/icons/static/ic_material_192px_light.svg",
-		pluginIconImageUrl = "https://google.github.io/material-design-icons/www/images/icons-library.png",
-		pluginLastUpdatedDate = "2018/07/02")
+		pluginIconUrl = "",
+		pluginIconImageUrl = "",
+		pluginLastUpdatedDate = "2018/07/02",
+		pluginGroupId = "com.jwebmp.plugins.iconsets",
+		pluginArtifactId = "jwebmp-material-icons",
+		pluginModuleName = "com.jwebmp.plugins.materialicons",
+		pluginStatus = PluginStatus.Released
+		
+)
 @SuppressWarnings("unused")
 public class MaterialIconsPageConfigurator
 		implements IPageConfigurator<MaterialIconsPageConfigurator>
@@ -51,7 +58,7 @@ public class MaterialIconsPageConfigurator
 	 * If this configurator is enabled
 	 */
 	private static boolean enabled = true;
-
+	
 	/**
 	 * A new instance of the page configurator
 	 */
@@ -59,7 +66,7 @@ public class MaterialIconsPageConfigurator
 	{
 		//No config needed
 	}
-
+	
 	/**
 	 * Method isEnabled returns the enabled of this AngularAnimatedChangePageConfigurator object.
 	 * <p>
@@ -71,20 +78,19 @@ public class MaterialIconsPageConfigurator
 	{
 		return MaterialIconsPageConfigurator.enabled;
 	}
-
+	
 	/**
 	 * Method setEnabled sets the enabled of this AngularAnimatedChangePageConfigurator object.
 	 * <p>
 	 * If this configurator is enabled
 	 *
-	 * @param mustEnable
-	 * 		the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * @param mustEnable the enabled of this AngularAnimatedChangePageConfigurator object.
 	 */
 	public static void setEnabled(boolean mustEnable)
 	{
 		MaterialIconsPageConfigurator.enabled = mustEnable;
 	}
-
+	
 	@NotNull
 	@Override
 	public Page configure(Page page)
@@ -95,7 +101,7 @@ public class MaterialIconsPageConfigurator
 		}
 		return page;
 	}
-
+	
 	@Override
 	public boolean enabled()
 	{

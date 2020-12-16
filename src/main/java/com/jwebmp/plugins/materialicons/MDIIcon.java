@@ -2,6 +2,7 @@ package com.jwebmp.plugins.materialicons;
 
 import com.jwebmp.core.base.ComponentHierarchyBase;
 import com.jwebmp.core.base.html.Italic;
+import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 import com.jwebmp.core.base.interfaces.IIcon;
 
 /**
@@ -9,9 +10,9 @@ import com.jwebmp.core.base.interfaces.IIcon;
  */
 public class MDIIcon<J extends MDIIcon<J>>
 		extends Italic<J>
-	implements IIcon<com.jwebmp.core.base.interfaces.IComponentHierarchyBase, J>
+	implements IIcon<com.jwebmp.core.base.interfaces.IComponentHierarchyBase<?,?>, J>
 {
-	private MDIIcons icon;
+	private final MDIIcons icon;
 
 	public MDIIcon()
 	{
@@ -41,7 +42,7 @@ public class MDIIcon<J extends MDIIcon<J>>
 	}
 
 	@Override
-	public ComponentHierarchyBase getIconComponent()
+	public IComponentHierarchyBase<?,?> getIconComponent()
 	{
 		return this;
 	}
