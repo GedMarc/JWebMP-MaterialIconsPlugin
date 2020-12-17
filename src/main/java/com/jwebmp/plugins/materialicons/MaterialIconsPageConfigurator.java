@@ -93,7 +93,7 @@ public class MaterialIconsPageConfigurator
 	
 	@NotNull
 	@Override
-	public Page configure(Page page)
+	 public Page<?> configure(Page<?> page)
 	{
 		if (!page.isConfigured() && enabled())
 		{
