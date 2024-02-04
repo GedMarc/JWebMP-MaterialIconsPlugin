@@ -5,7 +5,7 @@ module com.jwebmp.plugins.materialicons {
 	exports com.jwebmp.plugins.materialicons;
 
 	requires com.jwebmp.core;
-	requires com.guicedee.logmaster;
+	
 
 	requires jakarta.validation;
 	requires java.logging;
